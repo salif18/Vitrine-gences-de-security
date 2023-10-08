@@ -1,0 +1,16 @@
+<!-- ## dependances
+npm i -g concurrently 
+npm i -g electron-builder
+npm i -g electron --allow-root --unsafe-perm=true
+npm i -D electron --unsafe-perm=true --allow-root
+npm i electron-is-dev
+ -->
+ ## commande de nouveau repositor github
+
+git init 
+git config --global user.name"salif18"
+git config --global user.email"salifmoctarkonate@gmail.com"
+git add .
+git commit -m'first commit'
+git remote add origin https://github.com/salif18/Calculatrice-de-burreau.git
+git push -u origin master

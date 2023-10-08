@@ -1,0 +1,150 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12vh;
+  background-color: #ffffff;
+  transition: top 0.5s ease;
+  top: -50px;
+  z-index: 1;
+  img {
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+  }
+  .links {
+    text-decoration: none;
+    margin: 20px;
+    color: #3a3838ee;
+    font-family: 'Roboto Slab' , sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    &:hover{
+      color:#ff256c;
+      border-bottom: 2px solid #ff256c;
+      padding-bottom: 5px;
+      transition:  0.5s ease;
+      
+    }
+  }
+
+  .activeLink {
+    text-decoration: none;
+    margin: 20px;
+    color: #ff256c;
+    font-family: 'Roboto Slab' , sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    &:hover{
+      color:#ff256c;
+      border-bottom: 2px solid #ff256c;
+      padding-bottom: 5px;
+      transition:  0.5s ease;
+      
+    }
+    
+  }
+}
+
+.navbarFixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12vh;
+  background-color: #ffffff;
+  z-index: 1;
+  transition: top 0.8s ease;
+  box-shadow: 2px 2px 2px 2px #f1f1f1f4;
+  img {
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+  }
+  .links {
+    text-decoration: none;
+    margin: 20px;
+    color: #313030ee;
+    font-family: 'Roboto Slab' , sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:hover{
+      color:#ff256c;
+      border-bottom: 2px solid #ff256c;
+      padding-bottom: 5px;
+      transition:  0.5s ease;
+      
+    }
+  }
+
+  .activeLink {
+    text-decoration: none;
+    margin: 20px;
+    font-family: 'Roboto Slab' , sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ff256c;
+    &:hover{
+      color:#ff256c;
+      border-bottom: 2px solid #ff256c;
+      padding-bottom: 5px;
+      transition:  0.5s ease;
+      
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    img {
+      display: none;
+    }
+    font-size: 0.68em;
+  
+  .links {
+
+    font-size: 0.9em;
+    margin: 0.4em;
+  }
+  .activeLink {
+    font-size: 0.9em;
+     margin: 0.4em;
+  }
+}
+
+.navbarFixed{
+  flex-direction: column;
+    
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  img {
+    display: none;
+  }
+  font-size: 0.68em;
+
+.links {
+
+  font-size: 0.9em;
+  margin: 0.4em;
+}
+.activeLink {
+  font-size: 0.9em;
+   margin: 0.4em;
+}
+}
+}

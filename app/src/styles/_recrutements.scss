@@ -6,12 +6,47 @@
     align-items: center;
     padding: 20px;
     height: auto;
-    margin-top: 100px;
+    margin-top: 10%;
+    h2{
+        cursor: pointer;
+        font-size: 3em;
+        font-family:'Roboto Slab', sans-serif;
+        font-weight:900;
+        margin: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        &:hover{
+            color: #312626;
+            
+        }
+    }
+
+    h3{
+        padding: 15px;
+        margin:20px;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 1.9em;
+       
+    }
+    h4{
+        padding: 15px;
+        margin-bottom: 2%;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 1.9em;
+       
+    }
     .article-primary{
         background-color: #f4f4f4f4;
-         width: 80%;
+        width: 80%;
         display: flex;
-        margin: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
         justify-content: center;
         flex-direction: column;
         border-right:10px solid rgb(196, 3, 3) ;
@@ -19,16 +54,6 @@
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
         cursor: pointer;
-        h2{
-            padding: 15px;
-            margin: 20px;
-            flex-wrap: wrap;
-            text-transform: uppercase;
-            font-family: "Roboto", sans-serif;
-            font-weight: 500;
-            font-size: 1.9em;
-           
-        }
 
         ul{
             display: flex;

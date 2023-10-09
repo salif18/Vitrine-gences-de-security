@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useScroll,useAnimation,useTransform } from "framer-motion";
 
 const CriterRecrutement = () => {
@@ -15,10 +15,41 @@ const CriterRecrutement = () => {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
   const textX = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
+   //apprition de gauche
+   const controls = useAnimation();
+
+   useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById("zoom-element");
+ 
+      if (element) {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+ 
+        // Déclencher l'animation lorsque l'élément est à mi-chemin dans la fenêtre
+        if (elementTop < windowHeight / 2) {
+          controls.start({ scale: 1, transition: { duration: 0.9, ease: "easeOut" } });
+        } else {
+          controls.start({ scale: 0, transition: { duration: 0.9, ease: "easeOut" } });
+        }
+      }
+    };
+ 
+    window.addEventListener("scroll", handleScroll);
+ 
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   
   return (
-    <motion.article ref={prestationPage} className="article-primary ">
-    <h2>critère de recrutement et de sélection du personnel</h2>
+    <motion.article ref={prestationPage} className="article-primary "
+    id='zoom-element'
+    initial={{ scale: 0 }}
+    animate={controls}
+    >
+    
       <ul>
         <motion.li style={{y:textY}}>Maitrise de soi</motion.li>
         <li>L'expérience</li>

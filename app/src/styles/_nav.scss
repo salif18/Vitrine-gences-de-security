@@ -8,6 +8,7 @@
   transition: top 0.5s ease;
   top: -50px;
   z-index: 1;
+  
   img {
     margin: 20px;
     width: 50px;
@@ -18,14 +19,16 @@
     text-decoration: none;
     margin: 20px;
     color: #3a3838ee;
-    font-family: 'Roboto Slab' , sans-serif;
+    font-family: 'Roboto Slab',sans-serif ;
     font-size: 0.8em;
-    font-weight: 400;
+    font-weight: 550;
     text-transform: uppercase;
     &:hover{
       color:#ff256c;
-      border-bottom: 2px solid #ff256c;
-      padding-bottom: 5px;
+      border-top: 2px solid #ff256c;
+      padding-top: 10px;
+      border-bottom:2px solid #ff256c; 
+      padding-bottom: 10px;
       transition:  0.5s ease;
       
     }
@@ -37,13 +40,15 @@
     color: #ff256c;
     font-family: 'Roboto Slab' , sans-serif;
     font-size: 0.8em;
-    font-weight: 400;
+    font-weight: 550;
     text-transform: uppercase;
     &:hover{
       color:#ff256c;
-      border-bottom: 2px solid #ff256c;
-      padding-bottom: 5px;
+      border-top: 2px solid #ff256c;
+      padding-top: 10px;
       transition:  0.5s ease;
+      border-bottom:2px solid #ff256c; 
+      padding-bottom: 10px;
       
     }
     
@@ -61,7 +66,8 @@
   background-color: #ffffff;
   z-index: 1;
   transition: top 0.8s ease;
-  box-shadow: 2px 2px 2px 2px #f1f1f1f4;
+  box-shadow: 1.3px 1.3px 1.3px 1.3px #f1f1f1f4;
+  
   img {
     margin: 20px;
     width: 50px;
@@ -74,14 +80,15 @@
     color: #313030ee;
     font-family: 'Roboto Slab' , sans-serif;
     font-size: 0.8em;
-    font-weight: 500;
+    font-weight: 550;
     text-transform: uppercase;
     &:hover{
       color:#ff256c;
-      border-bottom: 2px solid #ff256c;
-      padding-bottom: 5px;
+      border-top: 2px solid #ff256c;
+      padding-top: 10px;
       transition:  0.5s ease;
-      
+      border-bottom:2px solid #ff256c; 
+      padding-bottom: 10px;
     }
   }
 
@@ -90,15 +97,16 @@
     margin: 20px;
     font-family: 'Roboto Slab' , sans-serif;
     font-size: 0.8em;
-    font-weight: 500;
+    font-weight: 550;
     text-transform: uppercase;
     color: #ff256c;
     &:hover{
       color:#ff256c;
-      border-bottom: 2px solid #ff256c;
-      padding-bottom: 5px;
+      border-top: 2px solid #ff256c;
+      padding-top: 10px;
       transition:  0.5s ease;
-      
+      border-bottom:2px solid #ff256c; 
+      padding-bottom: 10px;
     }
   }
 }

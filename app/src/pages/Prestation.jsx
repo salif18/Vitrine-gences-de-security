@@ -17,12 +17,13 @@ const Prestation = () => {
         initial={{ width: 0 }}
         animate={{ width: "100%" }}
         exit={{ y: window.innerHeight, transition: { duration: 0.5 } }}
-      >
+      > 
+        
         <article className="fond-image">
           <img src={imge} alt="" />
         </article>
-
         <PrestaTitre />
+       
         <section className="flex-container">
           <section className="child1">
             <PrestaNosPrestation />

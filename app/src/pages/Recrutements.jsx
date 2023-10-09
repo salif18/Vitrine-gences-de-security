@@ -11,7 +11,7 @@ const Recrutements = () => {
 
   useEffect(() => {
    const handleScroll = () => {
-     const element = document.getElementById("top-element");
+     const element = document.getElementById("zoom-element");
 
      if (element) {
        const elementTop = element.getBoundingClientRect().top;
@@ -19,9 +19,9 @@ const Recrutements = () => {
 
        // Déclencher l'animation lorsque l'élément est à mi-chemin dans la fenêtre
        if (elementTop < windowHeight / 2) {
-         controls.start({ x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } });
+         controls.start({ scale: 1, transition: { duration: 0.9, ease: "easeOut" } });
        } else {
-         controls.start({ x: -100, opacity: 0, transition: { duration: 0.6, ease: "easeOut" } });
+         controls.start({ scale: 0, transition: { duration: 0.9, ease: "easeOut" } });
        }
      }
    };
@@ -41,24 +41,34 @@ const Recrutements = () => {
       animate={{ width: "100%" }}
       exit={{ x: window.innerHeight, transition: { duration: 0.5 } }}
     >
+     <h2>critère de recrutement </h2>
+     <h3>Et de </h3>
+    <h4>Sélection du personnel</h4>
     
       <CriterRecrutement />
-      <article className="image-section">
-        <motion.div className="fond-color " 
-        id='top-element'
-        initial={{ x: -100, opacity: 0 }}
-        animate={controls}>
+      <motion.article className="image-section" 
+      id='zoom-element'
+      initial={{ scale: 0 }}
+      animate={controls}
+      >
+        <div className="fond-color " 
+        
+        >
           <img src={lg} alt="" />
-        </motion.div>
-      </article>
-      <article className="text-zone">
+        </div>
+      </motion.article>
+      <motion.article className="text-zone"
+      id='zoom-element'
+      initial={{ scale: 0 }}
+      animate={controls}
+      >
         <h2>
           Les missions de
           <br /> l'agent de sécurité incendie
         </h2>
         <Missions />
         <CritereFooter />
-      </article>
+      </motion.article>
     </motion.section>
   );
 };
